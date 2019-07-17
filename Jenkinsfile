@@ -8,7 +8,6 @@ pipeline {
     }
     stage('build') {
       steps {
-        powershell ' clean install'
         sh 'mvn clean install'
       }
     }
