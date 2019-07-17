@@ -6,5 +6,10 @@ pipeline {
         git(url: 'https://github.com/balajireddy8898/simple-java-maven-app.git', branch: 'master')
       }
     }
+    stage('build') {
+      steps {
+        bat 'mvn cleaninstall'
+      }
+    }
   }
 }
